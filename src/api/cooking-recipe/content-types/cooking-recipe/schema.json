@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cooking_recipes",
+  "info": {
+    "singularName": "cooking-recipe",
+    "pluralName": "cooking-recipes",
+    "displayName": "cooking-recipes"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "descipcion": {
+      "type": "richtext"
+    },
+    "ingredientes": {
+      "type": "enumeration",
+      "enum": [
+        "ingrediente"
+      ],
+      "required": true
+    },
+    "imagen": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "titulo"
+    }
+  }
+}
